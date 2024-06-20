@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Sajeed Tiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="reports.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="title">Sajeed Tiles</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="reports">
+            <h2>Reports</h2>
+            <div class="report-options">
+                <label for="report-date">Select Date for Daily Report:</label>
+                <input type="date" id="report-date">
+                <button id="daily-report">Daily Report</button>
+                <br>
+                <label for="report-month">Select Month for Monthly Report:</label>
+                <input type="month" id="report-month">
+                <button id="monthly-report">Monthly Report</button>
+                <br>
+                <label for="report-year">Select Year for Yearly Report:</label>
+                <input type="number" id="report-year" min="2000" max="2100" step="1" value="2023">
+                <button id="yearly-report">Yearly Report</button>
+            </div>
+            <div id="report-results">
+                <!-- Report results will be displayed here -->
+            </div>
+            <button id="export-report">Export to Excel</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sajeed Tiles. All rights reserved.</p>
+    </footer>
+</body>
+</html>
