@@ -16,28 +16,29 @@ body, html {
 }
 
 header {
-    background-color: #007BFF; /* Blue background */
+    background-color: #007BFF;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     animation: slideDown 1s ease-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-    margin-left: 1rem;
     font-size: 2rem;
     font-weight: bold;
+    margin: 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    margin-right: 1rem;
 }
 
 nav ul li {
@@ -54,18 +55,18 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0056b3; /* Darker blue */
-    color: #FFD700; /* Gold color on hover */
+    background-color: #0056b3;
+    color: #FFD700;
 }
 
 main {
-    flex: 1; /* Ensures main takes up remaining space */
-    padding: 2rem;
+    flex: 1;
+    padding: 1rem;
     animation: fadeIn 1.5s ease-in;
 }
 
 #home {
-    background-image: url('sajeed.jpg'); /* Replace with your image path */
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,13 +83,13 @@ main {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 800px;
     text-align: center;
 }
@@ -103,8 +104,8 @@ p {
 .bill-summary,
 .admin-form,
 .admin-products {
-    width: 100%; /* Full width on smaller screens */
-    margin-bottom: 2rem; /* Space between sections */
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 /* Form Styles */
@@ -181,7 +182,7 @@ tbody tr:nth-child(even) {
 
 /* Footer Styles */
 footer {
-    background-color: #007BFF; /* Blue background */
+    background-color: #007BFF;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -203,15 +204,15 @@ button, .delete-button {
 }
 
 button:hover, .delete-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .delete-button {
-    background-color: #ff4d4d; /* Red background */
+    background-color: #ff4d4d;
 }
 
 .delete-button:hover {
-    background-color: #ff1a1a; /* Darker red on hover */
+    background-color: #ff1a1a;
 }
 
 /* Animations */
@@ -258,7 +259,45 @@ button:hover, .delete-button:hover {
     .bill-summary,
     .admin-form,
     .admin-products {
-        width: 48%; /* Split width on larger screens */
-        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        width: 48%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .form-group input, .form-group select {
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"], button, .delete-button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    thead th, tbody td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
