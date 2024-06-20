@@ -15,7 +15,6 @@ body, html {
     flex-direction: column;
 }
 
-/* Header Styles */
 header {
     background-color: #007BFF; /* Blue background */
     color: white;
@@ -59,7 +58,6 @@ nav ul li a:hover {
     color: #FFD700; /* Gold color on hover */
 }
 
-/* Main Content Styles */
 main {
     flex: 1; /* Ensures main takes up remaining space */
     padding: 2rem;
@@ -95,20 +93,18 @@ p {
     text-align: center;
 }
 
-/* Container Styles */
 .billing-container,
 .admin-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
+    flex-direction: column;
 }
 
 .billing-form,
 .bill-summary,
 .admin-form,
 .admin-products {
-    width: 50%; /* Each section takes up 50% of the container width */
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 2rem; /* Space between sections */
 }
 
 /* Form Styles */
@@ -247,5 +243,22 @@ button:hover, .delete-button:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .billing-container,
+    .admin-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .billing-form,
+    .bill-summary,
+    .admin-form,
+    .admin-products {
+        width: 48%; /* Split width on larger screens */
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
     }
 }
